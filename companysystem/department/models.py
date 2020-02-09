@@ -19,8 +19,10 @@ class Manager(models.Model):
 		return self.name
 
 class Employee(models.Model):
-	manager = models.ForeignKey(Manager,on_delete=models.CASCADE)
-	name    = models.CharField(max_length=20,blank=False,null=False)
+	name       = models.CharField(max_length=20,blank=False,null=False)
+	manager    = models.ForeignKey(Manager,on_delete=models.CASCADE)
+	# department = models.ForeignKey(Department,on_delete=models.CASCADE)
+	
 
 	def __str__(self):
 		return self.name
