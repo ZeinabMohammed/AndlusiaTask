@@ -30,11 +30,4 @@ class Employee(models.Model):
 	def __str__(self):
 		return self.emp_name
 
-	# def get_absolute_url(self):
-	# 	return reverse("advertise:advertise-detail", kwargs={"pk":self.pk})
 
-#Profile Table
-class Profile(models.Model):
-	user = models.OneToOneField(User, on_delete = models.CASCADE)
-	def __str__(self):
-		return self.user
